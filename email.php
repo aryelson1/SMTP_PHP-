@@ -1,5 +1,4 @@
-php
-Copy
+
 <?php
 
 // Importa as classes necessárias do PHPMailer
