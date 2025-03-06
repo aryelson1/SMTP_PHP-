@@ -6,6 +6,7 @@ Este repositório contém uma função PHP que utiliza a biblioteca PHPMailer pa
 
 1. **PHP**: Certifique-se de que o PHP está instalado e configurado no seu ambiente.
 2. **PHPMailer**: A biblioteca PHPMailer deve estar incluída no seu projeto. Você pode baixá-la [aqui](https://github.com/PHPMailer/PHPMailer).
+3. Caso tenha dificuldade, no repositório está disponivel os arquivos da bibliotece PHPMailer.
 
 ## Passo a Passo para Usar a Função `enviarEmail`
 
