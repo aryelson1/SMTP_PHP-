@@ -67,18 +67,42 @@ A função `enviarEmail` recebe quatro parâmetros:
 
 Exemplo de uso:
 
+    ```JavaScript 
+    function enviarEmail(){
+        // Captura os dados do formulário
+        const formData = new FormData(this);
+
+        // Envia os dados via AJAX
+        fetch('enviar_email.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text()) // Converte a resposta para texto
+        .then(data => {
+            // Exibe o resultado na página
+            document.getElementById('resultado').innerText = data;
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+            document.getElementById('resultado').innerText = 'Erro ao enviar o e-mail.';
+        });
+    }
+
     ```php
-    $destinatarioEmail = 'destinatario@example.com';
-    $destinatarioNome = 'Nome do Destinatário';
-    $assunto = 'Assunto do E-mail';
-    $mensagem = '<h1>Olá!</h1><p>Este é um e-mail de teste.</p>';
+    // Captura os dados do formulário
+    $destinatarioEmail = $_POST['destinatarioEmail'];
+    $destinatarioNome  = $_POST['destinatarioNome'];
+    $assunto           = $_POST['assunto'];
+    $mensagem          = $_POST['mensagem'];
     
+    // Envia o e-mail
     $resultado = enviarEmail($destinatarioEmail, $destinatarioNome, $assunto, $mensagem);
     
+    // Retorna o resultado para o JavaScript
     if ($resultado === true) {
         echo 'E-mail enviado com sucesso!';
     } else {
-        echo 'Erro ao enviar o e-mail: ' . $resultado;
+        echo $resultado; // Exibe a mensagem de erro
     }
 
 ## 4. Execute o Script
