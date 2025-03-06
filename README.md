@@ -1,4 +1,4 @@
-# README - Função para Enviar E-mails via SMTP com PHP e PHPMailer
+# Função para Enviar E-mails via SMTP com PHP e PHPMailer
 
 Este repositório contém uma função PHP que utiliza a biblioteca PHPMailer para enviar e-mails via SMTP. Abaixo, você encontrará um guia passo a passo para configurar e usar a função, além de instruções para criar um e-mail SMTP no Gmail.
 
